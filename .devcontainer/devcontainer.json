@@ -1,0 +1,15 @@
+{
+  "name": "active-record-oracle-ids-bug",
+
+  "image": "ubuntu:22.04",
+  "postCreateCommand": [
+    ".devcontainer/install_ruby.sh"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp"
+      ]
+    }
+  }
+}

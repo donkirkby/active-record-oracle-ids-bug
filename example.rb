@@ -4,7 +4,7 @@ class Professor < ActiveRecord::Base
     self.table_name = :professors
     self.primary_key = 'id'
 end
-    
+
 puts "Hello, World!"
 
 ActiveRecord::Base.establish_connection(
@@ -19,7 +19,7 @@ puts "Found #{p_count} professors."
 name = 'Doc Brown'
 professor = Professor.find_by_name(name)
 if ! professor.nil?
-    puts "Found #{professor.inspect}."
+    puts "Found professor #{professor.name} with id #{professor.id.inspect}."
     professor.destroy!
     puts "Deleted #{professor.name}."
 end

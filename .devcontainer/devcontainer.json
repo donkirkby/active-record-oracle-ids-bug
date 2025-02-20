@@ -1,14 +1,24 @@
 {
   "name": "active-record-oracle-ids-bug",
 
-  "image": "ubuntu:22.04",
+  "dockerComposeFile": "../compose.yml",
+  "service": "client",
+  "runServices": ["client", "db"],
+  "workspaceFolder": "/opt/project",
   "postCreateCommand": [
     ".devcontainer/install_ruby.sh"
   ],
+  "postAttachCommand": "source /usr/share/rvm/scripts/rvm",
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/opt/oracle/instantclient_23_4",
+    "LD_LIBRARY_PATH": "/opt/oracle/instantclient_23_4",
+    "TNS_ADMIN": "/opt/project/config"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
-        "Shopify.ruby-lsp"
+        "Shopify.ruby-lsp",
+        "Oracle.sql-developer"
       ]
     }
   }

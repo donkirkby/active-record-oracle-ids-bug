@@ -1,0 +1,26 @@
+volumes:
+  dbdata:
+
+services:
+  db:
+    image: gvenzl/oracle-free:latest
+    environment:
+      - ORACLE_PASSWORD=Oracle23
+      - APP_USER=dev
+      - APP_USER_PASSWORD=dev
+      - TARGET_PDB=FREEPDB1
+    ports:
+      - 1521:1521
+    volumes:
+      - dbdata:/opt/oracle/oradata
+    healthcheck:
+      test: healthcheck.sh
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  client:
+    image: ubuntu:22.04
+    command: "tail -f /dev/null"
+    volumes:
+      - .:/opt/project

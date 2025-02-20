@@ -22,12 +22,9 @@ unzip instantclient-basic-linux.x64-*.zip -d /opt/oracle/
 unzip -o instantclient-sdk-linux.x64-*.zip -d /opt/oracle/
 unzip -o instantclient-sqlplus-linux.x64-*.zip -d /opt/oracle/
 
-export PATH=$PATH:/opt/oracle/instantclient_23_4
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_23_4
-
 rm instantclient-*.zip wget.log
 
-source /usr/share/rvm/scripts/rvm
+. /usr/share/rvm/scripts/rvm
 
 rvm requirements
 rvm install 3.3.6

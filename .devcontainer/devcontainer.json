@@ -11,7 +11,8 @@
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/opt/oracle/instantclient_23_4",
     "LD_LIBRARY_PATH": "/opt/oracle/instantclient_23_4",
-    "TNS_ADMIN": "/opt/project/config"
+    "TNS_ADMIN": "/opt/project/config",
+    "NLS_LANG": "AMERICAN_AMERICA.AL32UTF8"
   },
   "customizations": {
     "vscode": {

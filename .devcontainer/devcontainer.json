@@ -8,7 +8,6 @@
   "postCreateCommand": [
     ".devcontainer/install_ruby.sh"
   ],
-  "postAttachCommand": "source /usr/share/rvm/scripts/rvm",
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/opt/oracle/instantclient_23_4",
     "LD_LIBRARY_PATH": "/opt/oracle/instantclient_23_4",
@@ -19,7 +18,18 @@
       "extensions": [
         "Shopify.ruby-lsp",
         "Oracle.sql-developer"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash",
+            "args": ["--login"]
+          }
+        }
+      }
+
     }
   }
 }

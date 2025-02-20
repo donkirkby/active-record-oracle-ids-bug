@@ -3,16 +3,19 @@ volumes:
 
 services:
   db:
+    # https://github.com/gvenzl/oci-oracle-free#docker-compose
     image: gvenzl/oracle-free:latest
+    volumes:
+      - dbdata:/opt/oracle/oradata
+      - ./initdb.d:/container-entrypoint-initdb.d
     environment:
+      # https://github.com/gvenzl/oci-oracle-free#environment-variables
       - ORACLE_PASSWORD=Oracle23
       - APP_USER=dev
       - APP_USER_PASSWORD=dev
       - TARGET_PDB=FREEPDB1
     ports:
       - 1521:1521
-    volumes:
-      - dbdata:/opt/oracle/oradata
     healthcheck:
       test: healthcheck.sh
       interval: 10s

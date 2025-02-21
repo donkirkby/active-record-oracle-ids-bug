@@ -1,8 +1,6 @@
 require 'active_record'
 
 class Professor < ActiveRecord::Base
-    self.table_name = :professors
-    self.primary_key = 'id'
 end
 
 puts "Hello, World!"

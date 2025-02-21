@@ -5,5 +5,4 @@ ruby '3.3.6'
 
 gem 'activerecord', '~> 7.1'
 gem 'activerecord-oracle_enhanced-adapter', '~> 7.1'
-gem 'rake', '13.2.1'
 gem 'debug', '~> 1.10'

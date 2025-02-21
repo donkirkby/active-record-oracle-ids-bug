@@ -1,5 +1,5 @@
 {
-  "name": "active-record-oracle-ids-bug",
+  "name": "active-sandbox",
 
   "dockerComposeFile": "../compose.yml",
   "service": "client",

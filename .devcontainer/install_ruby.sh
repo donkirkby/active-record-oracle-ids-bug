@@ -28,6 +28,6 @@ rm instantclient-*.zip wget.log
 
 rvm requirements
 rvm install 3.3.6
-rvm rvmrc warning ignore /opt/qai/Gemfile
+rvm rvmrc warning ignore /opt/project/Gemfile
 gem install bundler -v "2.5.23"
 bundle install

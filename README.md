@@ -30,6 +30,15 @@ database tables are created by scripts in the `initdb.d` folder, and
 *each script* must connect as the DEV user, otherwise the tables are created
 as the SYS user.
 
+If you want to browse the database, follow these steps:
+
+1. Click on the SQL Developer icon, and the Create Connection button.
+2. Type a connection name, such as "freedb1".
+3. Type username "dev" and password "dev".
+4. Check the Save Password checkbox.
+5. Change the connection type to TNS.
+6. Click the Test button. If that passes, click the Connect button.
+
 If you want to add other Ruby gems, add them to the `Gemfile`, then rebuild the
 container. If you want to play with ActiveRecord and the Sinatra web server
 together, try my [Active Sinatra] project.

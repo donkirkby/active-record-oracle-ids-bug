@@ -7,7 +7,7 @@ puts "Hello, World!"
 
 ActiveRecord::Base.establish_connection(
     adapter: 'oracle_enhanced',
-    database: 'FREEPDB1',
+    database: 'FREEPDB1',  # alias in config/tnsnames.ora
     username: 'dev',
     password: 'dev')
 
